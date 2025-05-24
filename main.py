@@ -1,11 +1,13 @@
+class Counter:
+    count = 0
 
-class Student:
-    def __init__(self, name, marks):
-        self.name = name
-        self.marks = marks
+    def __init__(self):
+        Counter.count += 1
 
-    def display(self):
-        print(f"Name: {self.name}, Marks: {self.marks}")
+    @classmethod
+    def show_count(cls):
+        print(f"Total objects created: {cls.count}")
 
-s1 = Student("Arifa Ali", 98)
-s1.display()
+c1 = Counter()
+c2 = Counter()
+Counter.show_count()
